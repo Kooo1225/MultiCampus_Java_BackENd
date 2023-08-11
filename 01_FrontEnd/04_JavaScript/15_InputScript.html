@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function plus() {
+        n1 = document.getElementById('n1').value;
+        alert('Input N1 Value : ' + n1);
+
+        n2 = document.getElementById('n2').value;
+        alert('Input N2 Value : ' + n2);
+
+        int_n1 = parseInt(n1);
+        int_n2 = parseInt(n2);
+
+        alert(int_n1 + int_n2);
+      }
+
+      function login() {
+        user = document.getElementById('user').value;
+        pw = document.getElementById('pw').value;
+
+        if (user == 'root' && pw == '1234') {
+          alert('Login Success');
+        } else {
+          alert('Login Failure');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    Num1 : <input type="text" id="n1" /><br />
+    Num2 : <input type="text" id="n2" /><br />
+    <button onclick="plus()">PLUS</button>
+
+    <hr />
+
+    ID : <input type="text" id="user" /><br />
+    PW : <input type="text" id="pw" /><br />
+    <button onclick="login()">LOGIN</button>
+  </body>
+</html>

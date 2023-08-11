@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function swap(x, y) {
+        let temp;
+        temp = x;
+        x = y;
+        y = temp;
+
+        console.log(`Result x : ${x},  y : ${y}`);
+      }
+
+      let x = 10;
+      let y = 20;
+
+      console.log(`Before x : ${x},  y : ${y}`);
+      swap(x, y);
+      console.log(`After x : ${x},  y : ${y}`);
+    </script>
+  </body>
+</html>

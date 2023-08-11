@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* input에 입력이 불가능한 상태일 때 */
+      input:disabled {
+        background-color: pink;
+      }
+      /* input에 입력을 할 때 */
+      input:focus {
+        background-color: coral;
+      }
+      /* 버튼에 마우스가 올라왔을 때 */
+      button:hover {
+        color: aquamarine;
+        background-color: bisque;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    userid: <input type="text" name="user" disabled /><br />
+    pass: <input type="password" /><br />
+    <button>로그인하기</button>
+  </body>
+</html>

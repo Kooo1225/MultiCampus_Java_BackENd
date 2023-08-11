@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var name = "홍길동";
+      var age = 10;
+      age = 20; // 값의 재할당 가능
+      var tel = "01011112222";
+      var tel = "01022222222"; // 값의 재선언 가능
+
+      console.log("My P.N " + tel);
+
+      let phone = "01033333333";
+      // let phone = '01044444444' 는 재선언으로 에러가 발생함
+      phone = "01055555555";
+
+      console.log("My P.N " + phone);
+
+      const PI = 3.14;
+      // const PI = 3.14 는 재선언으로 에러가 발생함
+      PI = 3.15;
+    </script>
+  </body>
+</html>

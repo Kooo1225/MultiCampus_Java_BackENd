@@ -1,0 +1,32 @@
+.footer {
+  background-color: lightyellow;
+}
+
+.jumbotron {
+  background-image: url("../image/슈슈.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.avatar-sm {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.footer {
+  background-color: lightyellow;
+}
+
+.jumbotron {
+  background-image: url("../image/슈슈.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.avatar-sm {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}

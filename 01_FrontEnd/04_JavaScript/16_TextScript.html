@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function text() {
+        result.innerHTML = '내가 글자';
+      }
+
+      function text3() {
+        result2.innerHTML = '나도 글자';
+      }
+
+      function img() {
+        // let으로 선언하지 않았기 때문에 전역변수라고 함
+        result.innerHTML =
+          '<img src= http://source.unsplash.com/random/800x800?car';
+      }
+
+      function text2() {
+        // word = document.getElementById('word').value;
+        // 어차피 word가 전역변수니까 굳이 word를 text2 함수 안에 별도의 선언없이 해도 된다고함
+        // 근데 이런거 잘 안쓴다고함. 내가 생각해도 위험한 방법임 ㅋㅋ
+        result.innerHTML = '<font color=blue>' + word.value + '</font>';
+      }
+    </script>
+  </head>
+  <body>
+    <button style="background-color: palegreen" onclick="text3()">
+      Add Font3
+    </button>
+    <button style="background-color: yellow" onclick="text()">Add Font</button>
+    <button style="background-color: lime" onclick="img()">Add Image</button>
+    <button style="background-color: blanchedalmond" onclick="text2()">
+      Add Font2
+    </button>
+
+    Say : <input type="text" id="word" />
+    <hr />
+
+    <!-- 얘네가 전역 변수화 되었다고 하는데 뭔말인지 모르겠음; -->
+    <!-- 아! 위에서 아래로 훑는데 result가 없는데 왜 에러가 안나냐 이 말이었음 -->
+    <!-- 아무튼 훑을때 result가 어디있는지 함 찾아볼 때 찾아지면 전역 변수화가 된다는 뜻인듯 함 -->
+    <!-- 근데 사실 함수 작성할 땐 저렇게 안하고 매개 변수로 넘기지 않나? -->
+    <div id="result"></div>
+    <div id="result2"></div>
+
+    <script>
+      console.log(result);
+    </script>
+  </body>
+</html>
