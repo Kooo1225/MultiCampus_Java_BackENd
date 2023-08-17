@@ -16,6 +16,6 @@ public class DoWhileExample {
 			System.out.println(inputString);
 		}while(!inputString.equals("q"));
 		
-		System.out.println("\nProgram is Done")
+		System.out.println("\nProgram is Done");
 	}
 }

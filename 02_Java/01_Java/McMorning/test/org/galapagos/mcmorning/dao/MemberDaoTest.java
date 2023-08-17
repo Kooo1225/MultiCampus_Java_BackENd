@@ -1,6 +1,5 @@
 package org.galapagos.mcmorning.dao;
 
-import lombok.ToString;
 import org.galapagos.mcmorning.vo.Member;
 
 import java.util.List;
@@ -15,7 +14,7 @@ public class MemberDaoTest {
     }
 
     static void testRead() {
-        MemberDao dao = new MemberDao();
+        MemberListDao dao = new MemberListDao();
 
         List<Member> list = dao.getMemberList();
         for ( Member m  : list ) {
@@ -24,7 +23,7 @@ public class MemberDaoTest {
     }
 
     static void testAdd() {
-        MemberDao dao = new MemberDao();
+        MemberListDao dao = new MemberListDao();
         List<Member> list = dao.getMemberList();
 
         Member m2 = new Member("AddTest1", "1234", "AddTester1", "AddTester1@naver.com");
@@ -34,7 +33,7 @@ public class MemberDaoTest {
     }
 
     static void testFindByUserid() {
-        MemberDao dao = new MemberDao();
+        MemberListDao dao = new MemberListDao();
 
         String userid = "Test4";
         Member m = dao.findByUserid(userid);
@@ -48,10 +47,10 @@ public class MemberDaoTest {
     }
 
     static void testUpdate() {
-        MemberDao dao = new MemberDao();
+        MemberListDao dao = new MemberListDao();
 
         Member m = new Member("Test3", "1234", "UpdateTester1", "UpdateTester1@naver.com");
-        Member m2 = dao.Update(m);
+        Member m2 = dao.update(m);
 
         System.out.println(m2);
 
@@ -59,10 +58,11 @@ public class MemberDaoTest {
     }
 
     static void testDelete() {
-        MemberDao dao = new MemberDao();
+        MemberListDao dao = new MemberListDao();
 
         Member m = dao.delete("Test3");
 
         assert m != null && m.getUserid().equals("Test3") : "Del Fail";
     }
+
 }
